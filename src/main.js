@@ -43,12 +43,12 @@ const router = new VueRouter({
 })
 
 let initOptions = {
-  url: 'http://127.0.0.1:8080/auth', realm: 'bom-destino', clientId: 'app-vue', onLoad: 'login-required'
+  url: 'http://localhost:8080/auth', realm: 'bom-destino', clientId: 'app-vue', onLoad: 'login-required'
 }
 
 let keycloak = Keycloak(initOptions);
 
-keycloak.init({ onLoad: initOptions.onLoad }).success((auth) =>{
+keycloak.init({ onLoad: initOptions.onLoad }).then((auth) =>{
     
     console.log("Authenticated");
     new Vue({
@@ -62,21 +62,21 @@ keycloak.init({ onLoad: initOptions.onLoad }).success((auth) =>{
     localStorage.setItem("vue-refresh-token", keycloak.refreshToken);
 
     setInterval(() =>{
-      keycloak.updateToken(70).success((refreshed)=>{
+      keycloak.updateToken(70).then((refreshed)=>{
         if (refreshed) {
           console.log('Token refreshed');
         } else {
            console.log('Token not refreshed, valid for '
           + Math.round(keycloak.tokenParsed.exp + keycloak.timeSkew - new Date().getTime() / 1000) + ' seconds');
         }
-      }).error(()=>{
+      }).catch(()=>{
         console.log('Failed to refresh token');
       });
 
 
     }, 60000)
 
-}).error(() =>{
+}).catch(() =>{
   console.log("Authenticated Failed");
 });
 

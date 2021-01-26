@@ -2,31 +2,28 @@
   <div class="wrapper">
     <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/admin/overview">
+      <sidebar-link to="/bom-destino/overview">
         <i class="nc-icon nc-chart-pie-35"></i>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/admin/user">
+      <sidebar-link to="/bom-destino/user">
         <i class="nc-icon nc-circle-09"></i>
         <p>User Profile</p>
       </sidebar-link>
-      <sidebar-link to="/admin/table-list">
+      <sidebar-link to="/bom-destino/table-list">
         <i class="nc-icon nc-notes"></i>
-        <p>Table list</p>
+        <p>Lista de medicos</p>
       </sidebar-link>
-      <sidebar-link to="/admin/typography">
+      <sidebar-link to="/bom-destino/typography">
         <i class="nc-icon nc-paper-2"></i>
-        <p>Typography</p>
+        <p>Educação básica</p>
       </sidebar-link>
-      <sidebar-link to="/admin/icons">
+      <sidebar-link to="/bom-destino/icons">
         <i class="nc-icon nc-atom"></i>
-        <p>Icons</p>
+        <p>Serviços</p>
       </sidebar-link>
-      <sidebar-link to="/admin/maps">
-        <i class="nc-icon nc-pin-3"></i>
-        <p>Maps</p>
       </sidebar-link>
-      <sidebar-link to="/admin/maps">
+      <sidebar-link to="/bom-destino/query">
         <i class="nc-icon nc-pin-3"></i>
         <p>Consultas IPTU/ITR</p>
       </sidebar-link>

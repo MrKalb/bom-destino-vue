@@ -10,7 +10,11 @@
     <tbody>
     <tr v-for="(item, index) in data" :key="index">
       <slot :row="item">
-        <td v-for="column in columns" :key="column" v-if="hasValue(item, column)">{{itemValue(item, column)}}</td>
+        <td> {{item.name}} </td>
+        <td> {{item.territory}}</td>
+        <td> {{item.value}} </td>
+        <td> {{ formatDate(item.limitToPay) }} </td>
+        <td> {{item.link}} </td>
       </slot>
     </tr>
     </tbody>
@@ -29,6 +33,11 @@
       },
       itemValue (item, column) {
         return item[column.toLowerCase()]
+      }, 
+      formatDate(date) {
+        let newDate = new Date(date);
+        let dateFormated = newDate.toLocaleDateString('pt-BR', {timeZone: 'UTC'});
+        return dateFormated;
       }
     }
   }

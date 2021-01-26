@@ -30,10 +30,10 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="#">
-              Account
+              Minha Conta
             </a>
           </li>
-          <base-dropdown title="Dropdown">
+          <base-dropdown title="Serviços">
             <a class="dropdown-item" href="#">Action</a>
             <a class="dropdown-item" href="#">Another action</a>
             <a class="dropdown-item" href="#">Something</a>
