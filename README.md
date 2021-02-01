@@ -47,5 +47,5 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 You can use these users to access the system, joao, carlos and lucas, all of them has the following password: **123** 
 
 ##### This project needs a setup first, please visit the back-end's page on git hub: 
-** https://github.com/MrKalb/bom-destino **
+**https://github.com/MrKalb/bom-destino**
 
