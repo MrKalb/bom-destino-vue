@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-md-9">
               <select v-model="selectedQuery" class="form-select form-control-lg">
+                  <option value="" disabled selected>Selecione um serviço</option>
                   <option v-for="option in this.permissions">
                       {{option.toUpperCase()}}
                   </option>
@@ -14,6 +15,7 @@
       <div class="row" v-show="selectedQuery">
           <div class="col-md-9">
               <select v-model="request.dateToRequest" class="form-select form-control-lg">
+                  <option value="" disabled selected>Selecione o ano</option>
                   <option v-for="option in this.dates" >
                       {{option.date}}
                   </option>
