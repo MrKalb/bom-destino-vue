@@ -91,11 +91,12 @@ export default {
                 if(role === 'cpf' || role === 'cnpj') {
                     if(!this.permissions.includes('iptu')) {
                         this.permissions.push('iptu');
-                    } else if (roles === 'itr') {
-                        this.permissions.push('itr');
                     }
-                    this.request.id = decoded.preferred_username; 
                 }
+                if (role === 'itr') {
+                     this.permissions.push('itr');
+                }
+                this.request.id = decoded.preferred_username;
             });
         }, 
         sendRequest() {
